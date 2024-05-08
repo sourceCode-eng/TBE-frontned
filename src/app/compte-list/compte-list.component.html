@@ -1,0 +1,31 @@
+<div class="card my-5">
+    <div class="card-body">
+      <table class="table table-bordered table-striped">
+        <thead class="thread-dark">
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">DateCreation</th>
+          <th scope="col">decouvert</th>
+          <th scope="col">solde</th>
+          <th scope="col">taux_interet</th>
+          <th scope="col">type</th>
+          <th scope="col">etat</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let compte of comptes">
+          <td>{{ compte.id }}</td>
+          <td>{{ compte.dateCreation }}</td>
+          <td>{{ compte.decouvert }}</td>
+          <td>{{ compte.solde }}</td>
+          <td>{{ compte.taux_interet }}</td>
+          <td>{{ compte.type }}</td>
+          <td>{{ compte.etat }}</td>
+            <button (click)="supprimerCompte(compte.id)">Supprimer</button>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+  

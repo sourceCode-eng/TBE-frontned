@@ -1,0 +1,26 @@
+<div class="card my-5">
+    <div class="card-body">
+      <table class="table table-bordered table-striped">
+        <thead class="thread-dark">
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">dateOperation</th>
+          <th scope="col">montant</th>
+          <th scope="col">TypeOperation</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let operation of operations">
+          <td>{{ operation.id }}</td>
+          <td>{{ operation.dateOperation }}</td>
+          <td>{{ operation.montant }}</td>
+          <td>{{ operation.TypeOperation }}</td>
+
+            <button (click)="supprimerOperation(operation.id)">Supprimer</button>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+  
